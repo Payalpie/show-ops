@@ -18,7 +18,6 @@ const DropZone: React.FC<DropZoneProps> = ({ onDrop }) => {
 
 	const { getRootProps, getInputProps, isDragActive } = useDropzone({
 		onDrop: onDropCallback,
-		accept: "image/*",
 	});
 
 	return (
@@ -33,8 +32,8 @@ const DropZone: React.FC<DropZoneProps> = ({ onDrop }) => {
 				<p>Drop the files here ...</p>
 			) : (
 				<p className="text-center py-10 s:py-5 s:text-[12px] md:text-[16px] text-gray-400">
-					Click to upload or drag and drop
-					SVG, PNG, JPG or GIF (recommended size 1024x1024px) 
+					Click to upload or drag and drop SVG, PNG, JPG or GIF
+					(recommended size 1024x1024px)
 					{uploadedFiles.length > 0 && (
 						<span className="block mt-2">
 							<strong>Uploaded files:</strong>{" "}
